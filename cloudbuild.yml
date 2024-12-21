@@ -2,7 +2,8 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuilddemo/mynodejsapplication', '-f', 'Dockerfile', '.']
     dir: "./nodeapp"
-
+  - name: 'gcr.io/cloud-builders/docker'
+    arg: ['push', 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudbuilddemo/mynodejsapplication']
 
 
 options:
